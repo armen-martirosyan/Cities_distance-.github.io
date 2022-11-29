@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2,
+h3 {
+    text-align: center;
+    margin: 20px;
+}
+
+.home {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.arrow_up {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blue;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.anime_wave {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.anime_wave img {
+    width: 24px;
+    height: 24px;
+}
+
+.anime_wave::after,
+.anime_wave::before {
+    content: '';
+    position: absolute;
+    border: 2px solid blue;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse 3s linear infinite;
+}
+
+.anime_wave::after {
+    animation-delay: 1.5s;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+/* Index styles */
+
+.header_top {
+    height: 30px;
+    width: 100%;
+    border-bottom: 1px solid #5f636840;
+    position: fixed;
+    top: 0;
+}
+
+.create_table_link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.create_table_link a {
+    color: black;
+    text-decoration: underline;
+}
+
+header {
+    margin-top: 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.header_link {
+    color: #212121;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: arial, sans-serif;
+    margin-right: 15px;
+}
+
+.header_link:hover {
+    text-decoration: underline;
+}
+
+.accaunt {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #78909C;
+    color: white;
+    font-family: arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.accaunt:hover {
+    box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.75);
+}
+
+.app_menu_icon {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.app_menu_icon img {
+    width: 100%;
+}
+
+.app_menu_icon:hover {
+    background-color: #EFF0F0;
+}
+
+.form_container {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.google_logo {
+    width: 60%;
+    margin: auto;
+}
+
+.google_logo img {
+    width: 100%;
+}
+
+form {
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px 1px rgb(50 50 50 / 35%);
+}
+
+.search_icon,
+.microphon_icon {
+    position: absolute;
+}
+
+.search_icon {
+    width: 16px;
+    left: 10px;
+    top: 10px;
+}
+
+.microphon_icon {
+    width: 25px;
+    right: 10px;
+    top: 6px;
+    cursor: pointer;
+}
+
+/* Searsh styles */
+
+.search_list {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ebd5869e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.search_reult {
+    width: 45%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-bottom: 1px solid gray;
+}
+
+.table_link {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.undeline_addres {
+    text-decoration: underline;
+}
+
+/* Table styles */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ebd5869e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.distance_box {
+    width: 30%;
+}
+
+.distance_title {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid black;
+}
+
+.short,
+.middle,
+.long {
+    padding: 5px;
+    border: 1px solid gray;
+}
